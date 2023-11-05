@@ -1,0 +1,200 @@
+* {
+	margin: 0;
+	padding: 0;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*Menu-icon-mobile*/
+.menu {
+	width: 25px;
+	height: 20px;
+	position: fixed;
+	top: 41px;
+	right: 25px;
+	display: none;
+	z-index: 999;
+}
+.top, .center, .bottom {
+ 	height: 2px;
+ 	background-color: #fff;
+}
+
+.top, .center {
+	margin-bottom: 7px;
+}
+
+/*Menu icon animation*/
+	.top-rotate {
+		transform: rotate(45deg);
+		margin:9px 0 0 0;
+	}
+
+	.center-delete {
+		display: none;
+	}
+
+	.bottom-rotate {
+		transform: rotate(-45deg);
+		margin:-2px 0 0 0;
+	}
+
+
+nav {
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+
+
+nav li {
+	display: inline;
+	margin-right: 25px;
+}
+
+nav li a {
+	text-decoration: none;
+}
+
+nav li a:hover {
+	text-decoration: underline;
+	background-color: none;
+}
+
+nav li a:active {
+	background: transparent;
+	outline: none;
+}
+
+
+
+nav li .button a:active {
+	background-color: none;
+}
+
+.list a {
+	color: #fff;
+}
+
+.button a {
+	color: #207c91;
+}
+
+.logo {
+	height: 50px;
+	position: fixed;
+	top: 25px;
+	left: 25px;
+	z-index: 999;
+}
+
+
+
+.button {
+	width: 129px;
+	height: 33px;
+	background-color: #05dd78;
+	padding: 7px 22px;
+	border-radius: 8px;
+	color: #207c91;
+	font-weight: bold;
+}
+
+@media (max-width: 767px) {
+
+	.menu {
+		display: block;
+		cursor: pointer;
+	}
+	nav{
+		display: block;
+	}
+
+	nav li a {
+		font-size: 20px;
+	}
+
+	.nav-links {
+		margin-left: -1000px;
+	}
+
+	.nav-links-active {
+		background-color: #136493;
+		height:100vh;
+	}
+
+	.list {
+		margin-left: 25px;
+		margin-bottom: 12px;
+	}
+
+	.last {
+		margin-bottom: 25px;
+	}
+
+	.nav-links-active ul {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	.nav-links-active .button {
+		background-color: #05dd78;
+		width:calc(100% - 50px);
+		margin: 0 auto 100px auto;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #207c91;
+	}
+
+	.nav-links-active .button a {
+		text-align: center;
+		width: 100%;
+	}
+
+
+
+	.nav-links-active li {
+		display: block;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
