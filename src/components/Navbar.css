@@ -11,7 +11,7 @@
 	width: 25px;
 	height: 20px;
 	position: fixed;
-	top: 41px;
+	top: 35px;
 	right: 25px;
 	display: none;
 	z-index: 999;
@@ -49,6 +49,7 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	z-index: 998;
 }
 
 
@@ -60,6 +61,7 @@ nav li {
 
 nav li a {
 	text-decoration: none;
+	color: #fff;
 }
 
 nav li a:hover {
@@ -79,7 +81,7 @@ nav li .button a:active {
 }
 
 .list a {
-	color: #fff;
+	
 }
 
 .button a {
@@ -108,6 +110,10 @@ nav li .button a:active {
 
 @media (max-width: 767px) {
 
+	.logo {
+		height: 40px;
+	}
+
 	.menu {
 		display: block;
 		cursor: pointer;
@@ -120,17 +126,22 @@ nav li .button a:active {
 		font-size: 20px;
 	}
 
+	.list {
+		width: 110px;
+		padding-left: 10px;
+	}
+
 	.nav-links {
 		margin-left: -1000px;
 	}
 
 	.nav-links-active {
 		background-color: #136493;
-		height:100vh;
+		height:100%;
 	}
 
 	.list {
-		margin-left: 25px;
+		margin-left: 15px;
 		margin-bottom: 12px;
 	}
 
@@ -148,7 +159,7 @@ nav li .button a:active {
 	.nav-links-active .button {
 		background-color: #05dd78;
 		width:calc(100% - 50px);
-		margin: 0 auto 100px auto;
+		margin: 0 auto 30px auto;
 		padding: 0;
 		display: flex;
 		align-items: center;
