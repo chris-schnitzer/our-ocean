@@ -1,4 +1,9 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { 
+  createBrowserRouter,  
+  Route,
+  createRoutesFromElements,
+  RouterProvider 
+} from 'react-router-dom';
 
 import Events  from './pages/Events';
 import Home  from './pages/Home';
@@ -10,24 +15,27 @@ import PollutionTypes from './pages/PollutionTypes'
 
 import SharedLayout from './SharedLayout';
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+     <Route>
+      <Route path="/" element={<SharedLayout />} >
+        <Route index element={<Home />}></Route>
+        <Route path="/events" element={<Events />}></Route>
+        <Route path="/more-info" element={<MoreInfo />}></Route>
+
+        <Route path="/more-info/:pollution-types" element={<PollutionTypes />}></Route>
+        <Route path="/news" element={<News />}></Route>
+        <Route path="/take-action" element={<TakeAction />}></Route>
+        <Route path="/*" element={<Error />}></Route>
+      </Route>
+    </Route> 
+  )
+)
+
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<SharedLayout />} >
-            <Route index element={<Home />}></Route>
-            <Route path="/events" element={<Events />}></Route>
-            <Route path="/more-info" element={<MoreInfo />}></Route>
-
-            <Route path="/more-info/:pollution-types" element={<PollutionTypes />}></Route>
-            <Route path="/news" element={<News />}></Route>
-            <Route path="/take-action" element={<TakeAction />}></Route>
-            <Route path="/*" element={<Error />}></Route>
-          </Route>
-        </Routes> 
-      </BrowserRouter>
-
+      <RouterProvider router={router} />
     </>
   );
 }
