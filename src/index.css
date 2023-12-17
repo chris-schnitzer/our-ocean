@@ -18,13 +18,7 @@ body {
   	color: #fff;
 }
 
-/*container exluding homepage*/
-.container {
-	width: 100%;
-	padding: 0 25px;
-	margin-top: 140px;
 
-}
 h1, h2, h3 {
 	font-family: 'Playfair Display', serif;
 	font-weight: lighter;
@@ -33,6 +27,10 @@ h1, h2, h3 {
 h2 {
 	font-size: 27px;
 	line-height: 36px;
+}
+
+h3 {
+	font-size: 22px;
 }
 
 p {
@@ -97,17 +95,221 @@ p {
 	text-decoration: underline;
 }
 
+/*container exluding homepage*/
+.container {
+	width: 100%;
+	padding: 0 25px;
+	margin-top: 140px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 690px;
+}
+
 /*more-info*/
 .moreInfoIntro {
 	margin: 25px 0 45px 0;
-
 }
+
+.pollutionTypesWrap {
+	width: 100%;
+}
+
+.pollutionTypesWrap img {
+	width: 100%;
+}
+
+.pollutionType {
+	margin-top: 40px;
+}
+
+.pollutionType a {
+	display: block;
+	margin-top: 10px;
+	color: #fff;
+}
+
+.pollutionType h3 {
+	margin: 15px 0 10px 0;
+}
+
+.summary {
+	margin-top: 55px;
+	margin-bottom: 100px;
+}
+
+/*More Info subpages*/ 
+.subPageWrap img {
+	width: 100%;
+	margin: 40px 0 25px 0;
+}
+
+.subPageWrap a {
+	color: #fff;
+	display: block;
+	margin-top: 15px;
+}
+
+.subPageWrap {
+	margin-bottom: 100px;
+}
+
+/*news*/
+.container img {
+	width: 100%;
+}
+.news-wrap img, .events-wrap img {
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 15px;
+}
+
+.news-wrap h2, .events-wrap h2 {
+	margin: 10px 0 20px 0;
+}
+
+
+
+.story, .story-first, .event, .event-first {
+	margin-top: 50px;
+	padding-bottom: 0;	
+}
+
+/* first mapped item no border	*/
+.story-first, .event-first {
+	border-top: none;
+}
+
+.story, .event {
+	border-top: 1px dashed #fff;
+}
+
+.story a, .event a {
+	color: #fff;
+}
+
+.story-summary, .event-summary {
+	margin-bottom: 20px;
+}
+
+
+
+.story-first a:visited, .event-first a:visited {
+	color: #fff;
+}
+
+.single-story {
+	margin-bottom: 50px;
+}
+
+.single-story .date {
+	margin-top: 20px;
+}
+
+.single-story h2 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.events-wrap,.single-event-wrap, .news-wrap {
+	margin-bottom: 70px;
+}
+
+.date {
+	font-family: 'Playfair Display', serif;
+	font-weight: bold;
+	font-size: 30px;
+	margin-top: 5px;
+}
+
+.event-title {
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+/*Take action page*/
+.take-action-container {
+	width: 66%;
+	max-width: 450px;
+	margin: 180px auto 0 auto;
+}
+
+.take-action-container li {
+	list-style: none;
+	border-bottom: dashed 1px #fff;
+}
+
+.take-action-container li:last-of-type {
+	border-bottom: none;
+}
+
+.take-action-container li a {
+	text-decoration: none;
+	color: #fff;
+	font-family: 'Playfair Display', serif;
+	font-size: 30px;
+	display: block;
+	margin: 30px 0;
+}
+
+.take-action-container li a:visited {
+	color: #fff;
+}
+
+.take-action-container li a:hover {
+	text-decoration: underline;
+}
+
+
 
 @media (min-width: 768px) {
 	.homeHeader {
 		line-height: 32px;
 		font-size: 24px;
 	}
+
+	.pollutionTypesWrap {
+		
+	}
+
+	.pollutionType {
+		width: 310px;
+	}
+	/*.pollutionType:nth-of-type(2),.pollutionType:nth-of-type(3) {
+		flex: 2;
+	}*/
+	.rowOne, .rowTwo {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.news-wrap h2 {
+		margin: 20px 0 20px 0;
+	}
+
+
+	.image-and-meta {
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.image-and-meta img {
+		width: 215px;
+		margin-bottom:0;
+	}
+
+	.image-and-meta p {
+		margin-left: 20px;
+	}
+
+	.single-story img {
+		margin-bottom: 10px;
+	}
+
+	.story a h2, h2 {
+		margin-left: 0;
+	}
+
 }
 
 @media (min-width: 1048px) {

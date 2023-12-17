@@ -1,0 +1,41 @@
+{
+	"events" : [
+		{
+			"id": 1,
+			"dateDay": "12",
+			"dateMonth": "Dec",
+			"year": "2024",
+			"time": "2pm",
+			"location": "Crantock Beach, Newquay",
+			"img" : "https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/cornwall/places/crantock-beach/library/summer/crantock-beach-cornwall-1266908.jpg",
+			"alt": "Aerial view of Crantock Beach and surroundings",
+			"eventTitle": "Crantock Beach Clean",
+			"body": "Join us for an afternoon of fun. Meet at Crantock lifesaving hut, we'll start with a beach clean followed by a bbq ending with a live band at the Cornishman. Free give aways from our local sponsors."
+		},
+		{
+			"id": 2,
+			"dateDay": "13",
+			"dateMonth": "Dec",
+			"year": "2023",
+			"time": "10am",
+			"location": "Poldhu Beach, Poldhu",
+			"img" : "https://source.unsplash.com/PRovHUA_I6c",
+			"alt": "Poldhu Beach sign posts",
+			"eventTitle": "Friends of Poldhu - Keeping Poldhu Beach as nature intended",
+			"body": "Join the Friends of Poldhu for their beach clean on the first Friday of every month (10am Oct – Mar | 7pm Apr-Sept) at Poldhu Cove (TR12 7BU)."
+		},
+		{
+			"id": 3,
+			"dateDay": "01",
+			"dateMonth": "Jan",
+			"year": "2024",
+			"time": "11am",
+			"location": "Fistral Beach, Newquay",
+			"img" : "https://source.unsplash.com/S-llxYh3GzI",
+			"alt": "coldwater swim",
+			"eventTitle": "New Years Day coldwater dip",
+			"body": "Coldwater swim for charity"
+		}
+
+	]
+}

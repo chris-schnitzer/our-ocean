@@ -16,7 +16,7 @@ export default function Home() {
 				</h1>
 			</div>
 			
-			<img className="homeImageOne" src={underwaterImg}/>
+			<img className="homeImageOne" src={underwaterImg} alt="Clear below sea"/>
 			
 			<div className="secondHead">
 				<h1 className="homeHeader">Until fairly recently it was assumed that no matter 
@@ -26,7 +26,7 @@ export default function Home() {
 			</div>
 
 			<img 
-				className="homeImageTwo" src={pollutedImg}/>
+				className="homeImageTwo" src={pollutedImg} alt="pollution below the surface"/>
 
 			<div className="thirdHead">
 				<h1 className="homeHeader">The many types of marine pollution affect entire ecosystems which in turn 
@@ -35,7 +35,7 @@ export default function Home() {
 			</div>
 			
 
-			<img className="homeImageThree" src={fishingVillage} />
+			<img className="homeImageThree" src={fishingVillage} alt="beautiful fishing village"/>
 			
 			<div className="fourthHead">
 				<h1 className="homeHeader">

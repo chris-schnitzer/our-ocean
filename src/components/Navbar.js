@@ -11,7 +11,7 @@ export default function Navbar() {
 	return(
 		<>	
 
-			<NavLink to="/" onClick={() => setOpen(false)}><img className="logo" src={logo}/></NavLink>
+			<NavLink to="/" onClick={() => setOpen(false)}><img className="logo" src={logo} alt="Our Ocean logo"/></NavLink>
 
 			<div onClick={() => setOpen(!open)} className="menu">
 				<div className={open ? "top top-rotate" : "top"}>
