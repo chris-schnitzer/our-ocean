@@ -21,11 +21,12 @@ import Event, { eventLoader } from './pages/Event';
 
 import TakeAction from './pages/TakeAction';
 import Error from './pages/Error';
-// Layouts
 
+// Layouts
 import SharedLayout from './layouts/SharedLayout';
 import NewsLayout from './layouts/NewsLayout';
 import EventsLayout from './layouts/EventsLayout';
+import MoreInfoLayout from './layouts/MoreInfoLayout';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,11 +34,13 @@ const router = createBrowserRouter(
         <Route index element={<Home />} />
         
         
-        <Route path="more-info" element={<MoreInfo />}/>
-        <Route path="more-info/chemical-pollution" element={<ChemicalPollution />}/>
-        <Route path="more-info/noise-pollution" element={<NoisePollution />} />
-        <Route path="more-info/light-pollution" element={<LightPollution />} />
-        <Route path="more-info/plastic-pollution" element={<PlasticPollution />}/>
+        <Route path="more-info" element={<MoreInfoLayout />}>
+          <Route index element={<MoreInfo/>} />
+          <Route path="chemical-pollution" element={<ChemicalPollution />}/>
+          <Route path="noise-pollution" element={<NoisePollution />} />
+          <Route path="light-pollution" element={<LightPollution />} />
+          <Route path="plastic-pollution" element={<PlasticPollution />}/>
+        </Route>
         
         <Route path="news" element={<NewsLayout />}>
           <Route 
