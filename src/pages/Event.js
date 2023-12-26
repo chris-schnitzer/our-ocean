@@ -1,9 +1,14 @@
-import { useParams, useLoaderData } from 'react-router-dom';
+import { useParams, useLoaderData, Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function Event() {
 	const { id } = useParams();
 	const event = useLoaderData();
-	
+
+	useEffect(() => {
+			document.title = `Our Ocean | ${event.eventTitle}`;
+	}, []) 	
+
 	return(
 		<div className="container single-event-wrap">
 			<img src={event.img} alt={event.alt}/>
@@ -15,6 +20,7 @@ export default function Event() {
 			<p><b>{event.location}</b></p>
 			<h1 className="event-title"><b>{event.eventTitle}</b></h1>
 			<p>{event.body}</p>
+			<Link to="/events">Go Back</Link>
 		</div>
 	)
 }

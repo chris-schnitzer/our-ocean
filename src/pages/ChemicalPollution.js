@@ -1,10 +1,17 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import { useEffect } from 'react';
 
 import chemImg from '../images/chem_poll_lrg_opt.jpg';
 
 export default function ChemicalPollution() {
+	
+	useEffect(() => {
+		document.title = "Our Ocean | Chemical Pollution";
+	});
+	
 	return (
 		<>	
+
 			<div className="container subPageWrap">
 				<h1>Chemical pollution</h1>
 				<img src={chemImg} alt="Factories on side of river" />
@@ -27,6 +34,10 @@ export default function ChemicalPollution() {
 				fully processed by our bodies, end up in aquatic food webs.</p>
 				<Link to="/more-info">Go Back</Link>
 			</div>
+			
+			
+
+
 		</>
 	)
 }

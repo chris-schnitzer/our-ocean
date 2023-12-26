@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import plasticImg from '../images/plastic_poll_lrg_opt.jpg';
 
 export default function PlasticPollution() {
+
+	useEffect(() => {
+		document.title = "Our Ocean | Plastic Pollution";
+	})
+
 	return (
 		<>	
 			<div className="container subPageWrap">

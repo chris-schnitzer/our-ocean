@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import noiseImg from '../images/noise_poll_lrg_opt.jpg';
 
 export default function NoisePollution() {
+	
+	useEffect(() => {
+		document.title = "Our Ocean | Noise Pollution";
+	});
+
 	return (
 		<>	
 			<div className="container subPageWrap">

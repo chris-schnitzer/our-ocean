@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function TakeAction() {
+	
+	useEffect(() => {
+		document.title = "Our Ocean | Take Action";
+	});
+	
 	return(
 		<div className="take-action-container">
 			<ul>

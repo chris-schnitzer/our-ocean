@@ -35,7 +35,7 @@ const router = createBrowserRouter(
         
         
         <Route path="more-info" element={<MoreInfoLayout />}>
-          <Route index element={<MoreInfo/>} />
+          <Route index element={<MoreInfo title="more-info"/>} />
           <Route path="chemical-pollution" element={<ChemicalPollution />}/>
           <Route path="noise-pollution" element={<NoisePollution />} />
           <Route path="light-pollution" element={<LightPollution />} />

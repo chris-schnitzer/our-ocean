@@ -143,7 +143,7 @@ p {
 	margin: 40px 0 25px 0;
 }
 
-.subPageWrap a {
+.subPageWrap a, .single-event-wrap a, .single-story a {
 	color: #fff;
 	display: block;
 	margin-top: 15px;
@@ -183,7 +183,7 @@ p {
 	border-top: 1px dashed #fff;
 }
 
-.story a, .event a {
+.story a, .event a, .story-first a, .event-first a, .event a{
 	color: #fff;
 }
 
@@ -257,6 +257,76 @@ p {
 .take-action-container li a:hover {
 	text-decoration: underline;
 }
+
+/*404 page*/
+.error-wrap {
+	display: flex;
+	justify-content: center;
+}
+
+.lrg-404 {
+	font-size: 180px;
+	margin-bottom: 20px;
+}
+
+.error-title {
+	width: 100%;
+	max-width: 600px;
+	padding-bottom: 30px;
+/*	border-bottom: dashed 1px #fff;*/
+
+}
+
+.error-wrap div img {
+	width: 80px;
+	position: absolute;
+	top: 31%;
+	left: 50%;
+	z-index: -1;
+	opacity: 0.5;
+}
+
+.secondary-nav {
+	display: flex;
+	justify-content: center;
+	flex-flow: wrap;
+	margin-top: 75px;
+	margin-bottom: 20px;
+}
+
+.secondary-nav li {
+	display: inline-block;
+	list-style-type: none;
+	
+}
+
+.secondary-nav li::after {
+	content : "|" ;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.secondary-nav li:last-of-type::after {
+	content: " ";
+}
+
+.secondary-nav li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.secondary-nav li a:hover {
+	text-decoration: underline;
+}
+
+.sealImg {
+	position: absolute;
+	top: 70%;
+	left: 2%;
+	opacity: 0.1;
+	transform: rotate(-25deg);
+}
+
 
 
 

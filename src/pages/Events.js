@@ -1,9 +1,14 @@
 import { useLoaderData, Link } from 'react-router-dom';
-
-
+import { useEffect } from 'react';
 
 export default function Events() {
-	const eventsData = useLoaderData(); 
+
+	const eventsData = useLoaderData();
+		
+	useEffect(() => {
+		document.title = `Our Ocean | Events`;
+	}, []) 
+	
 	return (
 			<div className="container events-wrap">
 				<h1>Find an Event near you whether it’s a beach clean up, 
@@ -29,10 +34,8 @@ export default function Events() {
 							<Link to={ event.id.toString() }><p>View</p></Link>
 						</div>
 					</div>
-				))}
-	
+				))}	
 			</div>
-	
 	);
 }
 

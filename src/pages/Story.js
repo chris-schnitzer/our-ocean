@@ -1,4 +1,5 @@
-import { useParams, useLoaderData } from 'react-router-dom';
+import { useParams, useLoaderData, Link } from 'react-router-dom';
+
 
 export default function Story() {
 	
@@ -18,7 +19,9 @@ export default function Story() {
 					<br />
 				</div>
 			))}
+		<Link to="/news">Go Back</Link>
 		</div>
+
 	)
 }
 

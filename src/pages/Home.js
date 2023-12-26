@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import underwaterImg from "../images/underwater.jpg";
 import pollutedImg from "../images/polluted.jpg";
@@ -6,7 +6,9 @@ import fishingVillage from "../images/land_sea.jpg";
 import Button from '../components/Button.js';
 
 export default function Home() {
-
+	useEffect(() => {
+		document.title="Our Ocean | Home";
+	},[])
 	return(
 		<>	
 			<div className="firstHead">

@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import lightImg from '../images/light_poll_lrg_opt.jpg';
 
 export default function LightPollution() {
+	
+	useEffect(() => {
+		document.title = "Our Ocean | Light Pollution";
+	});
+	
 	return (
 		<>	
 			<div className="container subPageWrap">

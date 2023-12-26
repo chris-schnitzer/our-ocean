@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import chemThumbImg from '../images/chem_poll_thumb.jpg';
 import noiseThumbImg from '../images/noise_poll_thumb.jpg';
@@ -6,6 +7,9 @@ import lightThumbImg from '../images/light_poll_thumb.jpg';
 import plasticThumbImg from '../images/plastic_poll_thumb.jpg';
 
 export default function MoreInfo() {
+	useEffect(() => {
+	document.title =   "Our Ocean | More Info";
+}, [])
 	return(
 		<div className="container">
 			<h1>

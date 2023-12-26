@@ -1,9 +1,14 @@
 import { Link, useLoaderData } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function News() {
 	const newsData = useLoaderData();
-	return(
+	
+	useEffect(() => {
+		document.title = "Our-Ocean | News";
+	});
 
+	return(
 		<div className="container news-wrap">
 			<h1>All the latest happenings from our seas and beyond</h1>
 			{newsData.map(story => ( 
