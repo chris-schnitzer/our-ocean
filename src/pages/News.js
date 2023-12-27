@@ -33,6 +33,6 @@ export default function News() {
 
 //loader function
 export const newsLoader = async () => {
-	const res = await fetch('http://localhost:4000/news');
+	const res = await fetch('http://localhost:4000/news')
 	return res.json();
 }
