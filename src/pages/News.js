@@ -2,7 +2,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { useEffect } from 'react';
 
 export default function News() {
-	const newsData = useLoaderData();
+	const story = useLoaderData();
 	
 	useEffect(() => {
 		document.title = "Our-Ocean | News";
@@ -11,7 +11,7 @@ export default function News() {
 	return(
 		<div className="container news-wrap">
 			<h1>All the latest happenings from our seas and beyond</h1>
-			{newsData.map(story => ( 
+			{story.map(story => ( 
 				<div key={story.id}>
 					<div className={story.id === 1 ? 'story-first' : 'story'}>
 						<div className="image-and-meta">
@@ -36,3 +36,4 @@ export const newsLoader = async () => {
 	const res = await fetch('http://localhost:4000/news');
 	return res.json();
 }
+

@@ -1,11 +1,10 @@
+
 import { useParams, useLoaderData, Link } from 'react-router-dom';
 
 
 export default function Story() {
-	
 	const { id } = useParams();
 	const story = useLoaderData();
-	
 
 	return(
 		<div className="single-story container">
@@ -13,12 +12,12 @@ export default function Story() {
 			<p className="news-date">Posted on: <b>{story.date}</b></p>
 			<p>By: <b>{story.author}</b></p>
 			<h2>{story.headline}</h2>
-			{story.body.map(p => (
+{/*			{story.body.map(p => (
 				<div key={p}>
 					<p>{p}</p>
 					<br />
 				</div>
-			))}
+			))}*/}
 		<Link to="/news">Go Back</Link>
 		</div>
 
@@ -29,6 +28,7 @@ export default function Story() {
 export const storyLoader = async ({params}) => {
 	//id is from route path
 	const { id } = params;
-	const res = await fetch('http://localhost:4000/news/' + id);
-	return res.json();
+	console.log ({ id })
+	const res = await fetch('http://localhost:4000/news/');
 }
+
