@@ -1,34 +1,26 @@
-import { useParams, useLoaderData, Link } from 'react-router-dom';
+import { useParams, Link, useLoaderData } from 'react-router-dom';
+import newsData from '../data/news.json';
 
+export default function Story(props) {
+	const { storyId } = useParams();
+	const story = useLoaderData()
 
-export default function Story() {
+	console.log(newsData);
+
 	
-	const { id } = useParams();
-	const story = useLoaderData();
-	
-
 	return(
 		<div className="single-story container">
-			<img src={story.img} alt={story.alt}/>
-			<p className="news-date">Posted on: <b>{story.date}</b></p>
-			<p>By: <b>{story.author}</b></p>
-			<h2>{story.headline}</h2>
-			{story.body.map(p => (
-				<div key={p}>
-					<p>{p}</p>
-					<br />
-				</div>
-			))}
+		<h1>{storyId} - Story Page</h1>
 		<Link to="/news">Go Back</Link>
 		</div>
 
 	)
 }
 
-// loader function
-export const storyLoader = async ({params}) => {
-	//id is from route path
+
+const fetchData  = async ({params}) => {
 	const { id } = params;
-	const res = await fetch('http://localhost:4000/news/' + id);
+	const res = await fetch('../data/news.json' + id);
 	return res.json();
+	console.log(res.json())
 }

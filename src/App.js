@@ -14,10 +14,11 @@ import NoisePollution from './pages/NoisePollution';
 import LightPollution from './pages/LightPollution';
 import PlasticPollution from './pages/PlasticPollution';
 
-import News, { newsLoader } from './pages/News';
+import News from './pages/News';
 import Story, { storyLoader } from './pages/Story';
 import Events, { eventsLoader }  from './pages/Events';
 import Event, { eventLoader } from './pages/Event';
+import SingleStory from './pages/SingleStory.js';
 
 import TakeAction from './pages/TakeAction';
 import Error from './pages/Error';
@@ -46,12 +47,12 @@ const router = createBrowserRouter(
           <Route 
             index 
             element={<News />} 
-            loader={newsLoader}
           />
+
           <Route 
-            path=":id" 
+            path="/news/:storyId" 
             element={<Story />}
-            loader={storyLoader}
+            
           />
         </Route>
 
