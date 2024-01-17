@@ -49,7 +49,7 @@ const router = createBrowserRouter(
             loader={newsLoader}
           />
           <Route 
-            path=":id" 
+            path=":id"
             element={<Story />}
             loader={storyLoader}
           />
