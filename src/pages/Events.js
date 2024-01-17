@@ -14,9 +14,10 @@ export default function Events() {
 				<h1>Find an Event near you whether it’s a beach clean up, 
 				a demonstration, a summit or a fundraising get together.
 				</h1>
-				{eventsData.map(event => (
-					<div key={event.id}>
-						<div className={event.id === 1 ? 'event-first' : 'event'}>
+				{eventsData.map((event, index) => {
+					return (
+					<div key={event._id} className={ index === 0 ? 'event-first' : 'event'}>
+						<div>
 							<div className="image-and-meta">
 								<img src={event.img} alt={event.alt}/>
 								<div>
@@ -29,12 +30,13 @@ export default function Events() {
 								</div>
 							</div>
 
-							<Link to={ event.id.toString() }><h2>{event.eventTitle}</h2></Link>
+							<Link to={ event._id.toString() }><h2>{event.eventTitle}</h2></Link>
 							<p className="event-summary">{event.body.substring(0, 150) + "..."}</p>
-							<Link to={ event.id.toString() }><p>View</p></Link>
+							<Link to={ event._id.toString() }><p>View</p></Link>
 						</div>
 					</div>
-				))}	
+					)
+				})}	
 			</div>
 	);
 }

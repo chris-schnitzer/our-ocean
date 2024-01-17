@@ -28,5 +28,6 @@ export default function Event() {
 export const eventLoader  = async ({params}) => {
 	const { id } = params;
 	const res = await fetch('http://localhost:4000/events/' + id);
-	return res.json(); 
+	const events = await res.json();
+	return events; 
 }
