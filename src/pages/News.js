@@ -18,8 +18,8 @@ export default function News() {
 				<img src={item.img} alt={item.alt}/>
 				<p>{item.date}</p>
 				<p>{item.author}</p>
-				<Link to={ item._id.toString() }><h1>{item.headline}</h1></Link>
-				<p>{item.body[0].substring(0, 200) + " ..."}</p>
+				<Link to={ item._id.toString() }><h2>{item.headline}</h2></Link>
+				<p className="story-summary">{item.body[0].substring(0, 200) + " ..."}</p>
 				<Link to={ item._id.toString() }>Read More</Link>
 				</div>
 				)

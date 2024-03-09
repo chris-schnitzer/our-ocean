@@ -214,6 +214,10 @@ p {
 	margin-bottom: 70px;
 }
 
+.event-title {
+	margin: 10px 0 20px 0;
+}
+
 .date {
 	font-family: 'Playfair Display', serif;
 	font-weight: bold;
@@ -221,10 +225,6 @@ p {
 	margin-top: 5px;
 }
 
-.event-title {
-	margin-top: 25px;
-	margin-bottom: 20px;
-}
 /*Take action page*/
 .take-action-container {
 	width: 66%;
@@ -319,13 +319,10 @@ p {
 	text-decoration: underline;
 }
 
-.sealImg {
-	position: absolute;
-	top: 70%;
-	left: 2%;
-	opacity: 0.1;
-	transform: rotate(-25deg);
-}
+
+
+
+
 
 
 

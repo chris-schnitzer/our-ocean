@@ -18,7 +18,7 @@ export default function Event() {
 			<p>{event.dateMonth}</p>
 			<p><b>{event.time}</b></p>
 			<p><b>{event.location}</b></p>
-			<h1 className="event-title"><b>{event.eventTitle}</b></h1>
+			<h2 className="event-title"><b>{event.eventTitle}</b></h2>
 			<p>{event.body}</p>
 			<Link to="/events">Go Back</Link>
 		</div>
