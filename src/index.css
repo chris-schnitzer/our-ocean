@@ -41,12 +41,26 @@ p {
 
 
 /*home*/
+
+/*first slide wrap*/
 .firstHead, .secondHead, .thirdHead, .fourthHead {
 	width: 100%;
 	height: 100vh;
 	display: flex;
+	position: relative;
 	justify-content: center;
+}
+
+.firstHead {
 	align-items: center;
+}
+.secondHead {
+	align-items: center;
+}
+
+.fourthHead {
+	align-items: center;
+	flex-direction: column;
 }
 
 .homeHeader {
@@ -57,30 +71,17 @@ p {
 	font-size: 20px;
 }
 
-.homeImageOne, .homeImageTwo, .homeImageThree {
-	width: 66%;
-	max-width: 600px;
+.secondHomeHeader, .thirdHomeHeader {
+	position: absolute;
+	width: 55%;
 }
 
-.homeImageOne {
-	display: flex;
-	margin-left: auto;
-	margin-right: 20px;
+.secondHomeHeader {
+	margin-left: 25%;
 }
 
-.homeImageTwo {
-	margin-left: 20px;
-}
-
-.homeImageThree {
-	margin-right: auto;
-	margin-left: auto;
-	display: block;
-}
-
-.fourthHead {
-	flex-direction: column;
-	margin-bottom: 20px;
+.thirdHomeHeader {
+	margin-top: 130px;
 }
 
 .fourthHead .button {
@@ -93,6 +94,85 @@ p {
 
 .fourthHead a:hover {
 	text-decoration: underline;
+}
+
+/*Bg image wraps*/
+.firstHeadImageHolder, .secondHeadImageHolder, .thirdHeadImageHolder {
+	width: 100%;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
+
+.firstHeadImageHolder {
+
+	background-image: url("./images/underwater2.jpg");
+	background-position: bottom;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	opacity: 0.2;
+
+}
+.secondHeadImageHolder {
+	width: 100%;
+	height: 100vh;
+	background-image: url("./images/underwater_polluted.jpg");
+	background-position: center;
+	position: relative;
+	opacity: 0.2;
+}
+
+.thirdHeadImageHolder {
+	width: 100%;
+	height: 100vh;
+	background-image: url("./images/diver.jpg");
+	background-position: center;
+	position: relative;
+	opacity: 0.1;
+}
+
+/*scroll icon*/
+.scroll, .thirdScroll {
+	width: 20px;
+	height: 27px;
+	border-radius: 8px;
+	border: 1px solid #fff;
+	position: absolute;
+	bottom: 7%;
+	z-index: 1;
+	background-color: none;
+	display: flex;
+	justify-content: center;
+}
+
+.scrollWheel, .thirdScrollWheel {
+	background-color: #05dd78;
+	width: 3px;
+	height: 4px;
+	z-index: 3;
+	margin-top: 7px;
+}
+
+.secondScroll {
+	width: 20px;
+	height: 27px;
+	border-radius: 8px;
+	border: 1px solid #fff;
+	position: absolute;
+	z-index: 1;
+	background-color: none;
+	display: flex;
+	justify-content: center;
+	bottom: 7%;
+}
+
+.secondScrollWheel {
+	background-color: #05dd78;
+	width: 3px;
+	height: 4px;
+	z-index: 2;
+	margin-top: 7px;
 }
 
 /*container exluding homepage*/
